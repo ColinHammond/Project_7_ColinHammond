@@ -6,8 +6,7 @@ def calc_inflation(init_bal, interest_rate, years_to_go):
     if init_bal == 0:
         return 0
     interest = init_bal*interest_rate
-    new_bal = init_bal*interest
-    return calc_inflation(new_bal, interest, years_to_go-1)
+    return calc_inflation(init_bal+interest, interest, years_to_go-1)
 
 def main():
     input1 = int(input("What is your initial balance?"))
